@@ -1,0 +1,30 @@
+.calendar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: $whitePrincipal;
+    h1{
+        color: $blackPrincipal;
+    }
+    .hoursContainer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 320px;
+        gap: 10px;
+        border: 1px solid $blackPrincipal;
+        border-radius: 5px;
+        padding: 10px;
+        label{
+            border: 1px solid $blackPrincipal;
+            width: max-content;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    }
+}
