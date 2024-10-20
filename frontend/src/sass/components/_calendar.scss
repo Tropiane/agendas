@@ -1,11 +1,11 @@
 .calendar{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100vw;
     justify-content: center;
-    gap: 10px;
-    padding: 10px;
-    background-color: $whitePrincipal;
+    width: auto;
+    border-radius: 5px;
+    color: $blackPrincipal;
     h1{
         color: $blackPrincipal;
     }
@@ -18,13 +18,25 @@
         width: 320px;
         gap: 10px;
         border: 1px solid $blackPrincipal;
+        background-color: #ffffff91;
         border-radius: 5px;
         padding: 10px;
         label{
-            border: 1px solid $blackPrincipal;
+            border: 1px solid rgba(0, 0, 0, 0.445);
             width: max-content;
             padding: 5px;
             border-radius: 5px;
         }
     }
+    h3{
+        margin: 0;
+     }
+     p{
+        margin: 0;
+     }
+     .calendarDate{
+        background-color: transparent;
+        border-radius: 10px;
+        margin: 0;
+     }
 }

@@ -5,7 +5,9 @@ function Main() {
 
     return (
         <div className="main">
-            <h1>Home</h1>
+            <div className="presentation">
+                <p>presentation</p>
+            </div>
             <Services/>
             <Calendar/>
         </div>

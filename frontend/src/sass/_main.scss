@@ -1,6 +1,35 @@
 .main{
-    background-color: #333333;
-     h1{
-        color: #ffffff;
-     }
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+
+   .presentation{
+      background-image: url(../../public/images/imgMain.jpg);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      width: 200px;
+      border-radius: 50px;
+      color: #ffffff91;
+   }
+   .calendarContainer{
+      background-image: url(../../public/images/bgMain.jpg);
+      background-size: cover;
+      background-position: left;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      .calendar{
+         align-self: flex-end;
+         margin-right: 10px;
+      }
+      h3{
+         align-self: self-end;
+         margin-right: 10px;
+      }
+   }
 }

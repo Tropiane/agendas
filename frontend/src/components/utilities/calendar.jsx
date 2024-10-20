@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css'; // Importa los estilos
+import 'react-calendar/dist/Calendar.css';
 
 function viewCalendar() {
     const [date, setDate] = useState(new Date());
@@ -36,28 +36,32 @@ function viewCalendar() {
     const availableHours = getAvailableHours(date);
 
     return (
-      <div className='calendar'>
-        <h1>Selecciona una fecha y hora</h1>
-        <Calendar onChange={handleDateChange} value={date} />
-        <h2>Selecciona la hora:</h2>
-        <div className='hoursContainer'>
-          {availableHours.map((hour, index) => (
-            <label key={index}>
-              <input
-                type="checkbox"
-                name="time"
-                value={hour}
-                checked={time === hour}
-                onChange={handleTimeChange}
-              />
-              {hour}
-            </label>
-          ))}
+      <>
+      <div className='calendarContainer'>
+        <h3>Agendate</h3>
+        <div className='calendar'>
+          <Calendar onChange={handleDateChange} value={date} className={"calendarDate"}/>
+                <p>
+                  Fecha seleccionada: {date.toDateString()} {time}
+                </p>
+          <div className='hoursContainer'>
+            {availableHours.map((hour, index) => (
+              <label key={index}>
+                <input
+                  type="checkbox"
+                  name="time"
+                  value={hour}
+                  checked={time === hour}
+                  onChange={handleTimeChange}
+                />
+                {hour}
+              </label>
+            ))}
+          </div>
         </div>
-        <p>
-          Fecha seleccionada: {date.toDateString()} {time}
-        </p>
-      </div>
+        
+      </div>  
+      </>
     );
 }
 export default viewCalendar
